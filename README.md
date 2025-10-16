@@ -1,11 +1,10 @@
 # gbhomework
 
 
-```markdown
-# VAT Calculator Automation
+# VAT Calculator Automation Test
 
 ## 📘 Overview
-This repository contains automated test scripts and documentation for the **VAT Calculator** web application.  
+This repository contains automated test scripts and documentation for a **VAT Calculator** web application.  
 
 ---
 ## 🧪 Automated Test Cases
@@ -47,6 +46,7 @@ This repository contains automated test scripts and documentation for the **VAT 
 | **Maintainability** | Clear separation between feature files, step definitions, and code. |
 | **CI/CD Integration** | Compatible with Jenkins, GitHub Actions, or Azure DevOps pipelines. |
 | **Reporting** | Supports HTML and Allure reports for test summary and visualization. |
+| **Cross-browser Testing** | Selenium supports all major browsers (Chrome, Firefox, Edge, Safari) |
 
 ---
 
@@ -55,6 +55,8 @@ This repository contains automated test scripts and documentation for the **VAT 
 ### Bug 001 — Decimal Precision Issue
 **Title:** Input field accepts more than 2 decimal places  
 **Severity:** Medium  
+**Environment:** SIT/ UAT/ Prod  
+**OS platform/ version:** Chrome 140, Windows 11  
 **Steps to Reproduce:**
 1. Open VAT Calculator.
 2. Select country (e.g., Germany) and VAT rate (e.g., 19%).
@@ -62,13 +64,16 @@ This repository contains automated test scripts and documentation for the **VAT 
 
 **Expected:** Restrict to 2 decimal places (e.g., `123.45`).  
 **Actual:** Field accepts more than 2 decimals.  
-**Module:** Amount Input Validation
+
+**Attachment:** Screenshot showing input field accepting extra decimals.
 
 ---
 
 ### Bug 002 — Missing Error Message for Max Amount
 **Title:** No error message displayed when amount exceeds `999,999,999`  
 **Severity:** Medium  
+**Environment:** SIT/ UAT/ Prod  
+**OS platform/ version:** Chrome 140, Windows 11   
 **Steps to Reproduce:**
 1. Open VAT Calculator.
 2. Enter `1,000,000,000` as Net amount.
@@ -76,13 +81,17 @@ This repository contains automated test scripts and documentation for the **VAT 
 **Expected:** Display error:  
 > “Amount exceeds the maximum allowed value (999,999,999).”
 
-**Actual:** Input restricted, but no error shown.
+**Actual:** Input restricted, but no error shown.  
+
+**Attachemnt:** Screenshot showing absence of error message after entering a large amount.  
 
 ---
 
 ### Bug 003 — Invalid Input Type Not Handled
 **Title:** Alphabetic or special characters accepted in amount field  
 **Severity:** High  
+**Environment:** SIT/ UAT/ Prod  
+**OS platform/ version:** Chrome 140, Windows 11  
 **Steps to Reproduce:**
 1. Open VAT Calculator.
 2. Enter invalid inputs (`abc`, `@#$`).
@@ -93,11 +102,13 @@ and prevent calculation.
 
 **Actual:** No validation triggered; field accepts invalid input.
 
+**Attachment:** Screenshot showing absence of error message after entering a non numeric value.  
+
 ---
 
 ## ❓ Open Questions / Clarifications Needed
 
-1. Should the field labels be updated to be more user-friendly and improve readability?
+1. Should the field labels on the site be updated to be more user-friendly and improve readability?
    - “Net” → instead of “Price without VAT”
    - “VAT” → instead of “Value-Added Tax”
    - “Gross” → instead of “Price incl. VAT”
@@ -107,3 +118,4 @@ and prevent calculation.
    - Should the calculator **round** or **reject** the input?
 5. Pressing **Enter** currently refreshes the page:
    - Should this behaviour be fixed to improve user experience?
+
