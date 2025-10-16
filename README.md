@@ -1,5 +1,3 @@
-# gbhomework
-
 
 # VAT Calculator Automation Test
 
@@ -118,4 +116,5 @@ and prevent calculation.
    - Should the calculator **round** or **reject** the input?
 5. Pressing **Enter** currently refreshes the page:
    - Should this behaviour be fixed to improve user experience?
+
 
