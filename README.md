@@ -1,11 +1,11 @@
 
 # VAT Calculator Automation Test
 
-## 📘 Overview
+## Overview
 This repository contains automated test scripts and documentation for a **VAT Calculator** web application.  
 
 ---
-## 🧪 Automated Test Cases
+## Automated Test Cases
 
 1. **VAT Calculation (Valid Input)**  
    - Verifies correct VAT computation for valid inputs.
@@ -15,7 +15,7 @@ This repository contains automated test scripts and documentation for a **VAT Ca
 
 ---
 
-## 🎯 Objectives
+## Objectives
 
 | Goal | Description |
 |------|--------------|
@@ -27,7 +27,7 @@ This repository contains automated test scripts and documentation for a **VAT Ca
 
 ---
 
-## 🧩 Framework Details
+## Framework Details
 
 **Technology Stack:**  
 - Selenium WebDriver  
@@ -48,7 +48,7 @@ This repository contains automated test scripts and documentation for a **VAT Ca
 
 ---
 
-## 🐞 Bug Report Example
+## Bug Report Example
 
 ### Bug 001 — Decimal Precision Issue
 **Title:** Input field accepts more than 2 decimal places  
@@ -104,7 +104,7 @@ and prevent calculation.
 
 ---
 
-## ❓ Open Questions / Clarifications Needed
+## Open Questions / Clarifications Needed
 
 1. Should the field labels on the site be updated to be more user-friendly and improve readability?
    - “Net” → instead of “Price without VAT”
